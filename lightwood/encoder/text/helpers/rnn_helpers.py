@@ -244,7 +244,7 @@ def readLangs(lang1, lang2, reverse=False):
         read().strip().split('\n')
 
     # Split every line into pairs and normalize
-    pairs = [[normalizeString(s) for s in l.split('\t')] for l in lines]
+    pairs = [[normalizeString(s) for s in line.split('\t')] for line in lines]
 
     # Reverse pairs, make Lang instances
     if reverse:
